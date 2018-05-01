@@ -1,0 +1,20 @@
+<ion-view view-title="Bienvenu" name="login">
+    <ion-content class="padding">
+    
+       <div class="list">
+           <label class="item item-input">
+                <span class="input-label" style="color: #371a00"  >Username</span>
+                <input type="text" ng-model="username">
+           </label>
+           <label class="item item-input">
+                <span class="input-label" style="color: #371a00" >Password</span>
+                <input type="password" ng-model="password">
+           </label>
+        </div>
+        <button class="button button-block button-balanced" style="color: #371a00" ng-click="login(username,password)">Login</button>
+        <h6>Nouveau Utilisateur <a href="#">cliquez ici</a></h6>
+        <br>
+        <br>
+        <div><img src="/img/logo5.png" style="display: block;margin: auto"></div>
+    </ion-content>
+  </ion-view>

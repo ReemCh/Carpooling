@@ -1,0 +1,25 @@
+<ion-view view-title="Liste des Trajets" name="listeTrajets">
+        
+  
+        <ion-content class="padding">
+            
+                 
+                  <ion-list>
+                              <ion-item class="item-remove-animate item-icon-right" ng-repeat="item in trajets.records " type="item-text-wrap" href="#/detailsTrajet/{{item.idTrajet}}">
+                                
+                                <h2 style="color: maroon">{{item.depart}}</h2><h2 style="color:lime">--></h2><h2 style="color: maroon">{{item.arrivee}}</h2>
+                                <p style="color: black">{{item.date}}</p>
+                                <p style="color: black" > prix : {{item.prix}} DT</p>
+                                <i class="icon ion-chevron-right icon-accessory" style="color: mediumblue"></i>
+                       
+                              
+                              </ion-item>
+                            </ion-list> 
+                            
+                           
+                                  
+           
+        </ion-content>
+        
+      </ion-view>
+      

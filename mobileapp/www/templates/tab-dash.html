@@ -1,0 +1,133 @@
+<ion-view view-title="Trajets" >
+  
+  
+    
+  <ion-content class="padding">
+    <div><h6 style="color: brown"></h6>Bienvenue *** <b>{{nomU}} {{prenomU}}</b> ***</h5></div>
+
+      <div class="list">
+
+          <div class="item item-divider" style="color: brown">
+            QUEL EST VOTRE TRAJET ?
+          </div>
+        
+         
+              <div class="list">
+
+                  <label class="item item-input item-select">
+                    <i class="icon ion-location"  style="color: limegreen"></i>
+                    <div class="input-label" style="padding-left: 5px">
+                      Départ
+                    </div>
+                    <select style="font-family:Snell Roundhand, cursive" ng-model="depart">
+                      <option>ARIANA</option>
+                      <option>Béja</option>
+                      <option>Ben Arous</option>
+                      <option>Bizerte</option>
+                      <option>Gabes</option>
+                      <option>Gafsa</option>
+                      <option>Jendouba</option>
+                      <option>Kairouan</option>
+                      <option>Kasserine</option>
+                      <option>Kebili</option>
+                      <option>La Manouba</option>
+                      <option>Le Kef</option>
+                      <option>Mahdia</option>
+                      <option>Médenine</option>
+                      <option>Monastir</option>
+                      <option>Nabeul</option>
+                      <option>Sfax</option>
+                      <option>Sidi Bouzid</option>
+                      <option>Siliana</option>
+                      <option>Sousse</option>
+                      <option>Tataouine</option>
+                      <option>Tozeur</option>
+                      <option>Tunis</option>
+                      <option>Zaghouan</option>
+                    </select>
+                  </label>
+                  <label class="item item-input item-select">
+                      <i class="icon ion-flag"  style="color: limegreen"> </i>
+                      <div class="input-label " style="padding-left: 5px">
+                        Arrivée
+                      </div>
+                      <select style="font-family:Snell Roundhand, cursive" ng-model="arrivee">
+                          <option>ARIANA</option>
+                          <option>Béja</option>
+                          <option>Ben Arous</option>
+                          <option>Bizerte</option>
+                          <option>Gabes</option>
+                          <option>Gafsa</option>
+                          <option>Jendouba</option>
+                          <option>Kairouan</option>
+                          <option>Kasserine</option>
+                          <option>Kebili</option>
+                          <option>La Manouba</option>
+                          <option>Le Kef</option>
+                          <option>Mahdia</option>
+                          <option>Médenine</option>
+                          <option>Monastir</option>
+                          <option>Nabeul</option>
+                          <option>Sfax</option>
+                          <option>Sidi Bouzid</option>
+                          <option>Siliana</option>
+                          <option>Sousse</option>
+                          <option>Tataouine</option>
+                          <option>Tozeur</option>
+                          <option>Tunis</option>
+                          <option>Zaghouan</option>
+                      </select>
+                    </label>
+                    <label class="item item-input" class="row">
+                        <i class="icon ion-calendar"  style="color:limegreen"> </i>
+                        <div class="input-label col col-33" style="padding-left: 5px">
+                        Date     
+                        </div>
+                        <div style="padding-left: 80px" class="col"><b><input type="date" ng-model="date"></b></div>
+                        
+                        
+                      </label>
+                      <label class="item item-input" class="row">
+                          <i class="icon ion-clock"  style="color: limegreen"> </i>
+                          <div class="input-label col col-33" style="padding-left: 6px">
+                          Heure    
+                          </div>
+                          <div style="padding-left: 125px" class="col col-bottom"><b><input type="time" ng-model="heure"></b></div>
+                          
+                          
+                        </label>
+                        <label class="item item-input">
+                          <i class="icon ion-cash"  style="color: limegreen"> </i>
+                          <div class="input-label " style="padding-left: 8px">
+                            Prix    
+                          </div>
+                          <div style="padding-left: 80px"><b><input type="number" ng-model="prix"></b></div>
+                          
+                          
+                        </label>
+                        
+                      
+                
+                    
+                    
+                </div>
+                
+          
+                <div class="item item-divider" style="color:#050450;font-size:10px">
+                    SUE CE TRAJET, JE SOUHAITE ETRE :
+                    
+                  </div>
+                  <div class="item">
+                      <ion-list>
+                          <ion-radio  ng-model="choix" ng-value="'C'" ng-click="AjoutTrajet(date,heure,depart,arrivee,prix,choix)">Conducteur</ion-radio>
+                          <ion-radio ng-model="choix" ng-value="'P'" ng-click="AfficherTrajet(date,heure,depart,arrivee,prix,choix)">Passager</ion-radio>
+                        </ion-list>
+                </div>
+        
+        </div>
+        
+
+      
+        
+  </ion-content>
+

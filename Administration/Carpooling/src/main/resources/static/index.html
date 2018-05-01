@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ma Route</title>
+
+<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" >
+<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/myStyle.css">
+
+
+
+
+<script type="text/javascript" src="angular/angular.min.js"></script>
+<script type="text/javascript" src="angular/angular-route.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+ 
+   
+</head>
+
+<body ng-app="MyApp">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Ma Route</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#/acceuil">Acceuil</a></li>
+      <li><a href="#/users">Abonnés</a></li>
+      <li><a href="#">Trajets</a></li>
+      <li><a href="#">Configuration</a></li>
+    </ul>
+  </div>
+</nav>
+<ng-view></ng-view>
+<script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+</body>
+
+</html>

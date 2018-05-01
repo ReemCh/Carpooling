@@ -1,0 +1,14 @@
+.spacer{
+	margin-top: 20px;
+}
+.spacer1{
+	
+	margin-left: 40 px
+}
+.clickable{
+	cursor :pointer;
+}
+
+.error{
+	color: red;
+}

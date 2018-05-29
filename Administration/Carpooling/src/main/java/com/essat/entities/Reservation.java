@@ -22,10 +22,12 @@ public class Reservation implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn(name="IdAnnonce")
+	@JsonIgnore
 	private Annonce annonce;
 
 	@ManyToOne
 	@JoinColumn(name = "idUtilisateur")
+	@JsonIgnore
 	private Utilisateur utilisateur;
 
 	public Reservation() {

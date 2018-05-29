@@ -23,12 +23,14 @@ public class Utilisateur implements Serializable {
 	private String nom;
 	private String prenom;
 	private int cin;
-	//private Date dateDeNaissance;
-	//private String email;
+	private Date dateDeNaissance;
+	private String email;
 	private String username;
 	private String upassword;
-	/*private Long telephone;
-	private String photo;*/
+	private Long telephone;
+	private double avis;
+	//private String photo;
+	
 	@OneToMany(mappedBy="utilisateur",fetch=FetchType.LAZY)
 	private Collection<Voiture> voiture;
 	@OneToMany(mappedBy="utilisateur",fetch=FetchType.LAZY)
@@ -53,6 +55,52 @@ public class Utilisateur implements Serializable {
 		this.cin = cin;
 	}
 	
+    
+
+	
+
+
+	public Date getDateDeNaissance() {
+		return dateDeNaissance;
+	}
+
+
+	public void setDateDeNaissance(Date dateDeNaissance) {
+		this.dateDeNaissance = dateDeNaissance;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public Long getTelephone() {
+		return telephone;
+	}
+
+
+	public void setTelephone(Long telephone) {
+		this.telephone = telephone;
+	}
+
+
+	
+
+
+	public double getAvis() {
+		return avis;
+	}
+
+
+	public void setAvis(double avis) {
+		this.avis = avis;
+	}
 
 
 	public String getUsername() {
@@ -114,7 +162,7 @@ public class Utilisateur implements Serializable {
 		this.cin = cin;
 	}
 
-	//@JsonIgnore
+	@JsonIgnore
 	public Collection<Voiture> getVoiture() {
 		return voiture;
 	}
@@ -144,7 +192,7 @@ public class Utilisateur implements Serializable {
 		this.message = message;
 	}
 
-	//@JsonIgnore
+	@JsonIgnore
 	public Collection<Reservation> getReservation() {
 		return reservation;
 	}

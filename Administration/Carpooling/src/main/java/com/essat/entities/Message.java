@@ -23,6 +23,7 @@ public class Message implements Serializable{
 	
 	@ManyToOne
 	@JoinColumn(name = "idUtilisateur")
+	@JsonIgnore
 	private Utilisateur utilisateur;
 
 	public Message() {

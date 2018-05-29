@@ -1,5 +1,6 @@
 package com.essat.service;
 
+import java.sql.*;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,11 +31,33 @@ public class AnnonceRestService {
 		
 		return annonceRepository.listAnnonces(id, new PageRequest(page, size));
 	}
+	
+	@RequestMapping(value="/tousAnnonces",method=RequestMethod.GET)
+	public Page<Annonce> lesAnnonces(@RequestParam (name="page",defaultValue="0")int page,
+			@RequestParam (name="size",defaultValue="4")int size) {
+		
+		return annonceRepository.listAnnonces1(new PageRequest(page, size));
+	}
 
-	/*@RequestMapping(value="/annonces",method=RequestMethod.GET)
-	public List<Annonce> listAnnonce() {
-		return annonceRepository.findAll();
-	}*/
+	
+	
+	@RequestMapping(value="/annoncesRes",method=RequestMethod.GET)
+	public List<Annonce> annoncesByIsReservation(Long id,@RequestParam (name="page",defaultValue="0")int page,
+			@RequestParam (name="size",defaultValue="4")int size){
+		
+		return annonceRepository.getAnnoncesByIdRes(id,new PageRequest(page, size));
+	}
+	
+	@RequestMapping(value="/annoncesMois",method=RequestMethod.GET)
+	public int getAnnoncesParM(int m) {
+		return annonceRepository.getNbAnnonces(m);
+	}
+	
+	
+	@RequestMapping(value="/rechAnnonces",method=RequestMethod.GET)
+	public List<Annonce> RechAnnonces(Date debut,Date fin){
+		return annonceRepository.rechAnnonces(debut, fin);
+	}
 	
 	
 }

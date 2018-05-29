@@ -1,0 +1,25 @@
+[
+{
+	"name" : "Rim Chaabene",
+        "age"  : "25",
+        "job" :"web developper",
+        "imagename" :"rim"
+        },
+
+{
+	"name" : "Amal Chaabene",
+        "age"  : "23",
+        "job" :"Network developper",
+        "imagename" :"amal"
+        }, 
+
+{
+	"name" : "Youssef Chaabene",
+        "age"  : "19",
+        "job" :"Student",
+        "imagename" :"youssef"
+        }
+
+
+
+]

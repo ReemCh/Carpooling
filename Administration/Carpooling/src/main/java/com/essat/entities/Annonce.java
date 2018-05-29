@@ -4,13 +4,16 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
@@ -24,10 +27,21 @@ public class Annonce implements Serializable{
 	private String lieuDepart;
 	private String lieuArrivee;
 	private double prix;
-	//private boolean fumeur;
+	private boolean fumeur;
+	private boolean bagages;
+	private boolean animaux;
+	private int nbPlaces;
+	private String gender;
+	
+	
+	
+	
+	
+	
 	
 	@ManyToOne
 	@JoinColumn(name = "idUtilisateur")
+	@JsonIgnore
 	private Utilisateur utilisateur;
 	
 	@OneToMany(mappedBy="annonce")
@@ -37,6 +51,68 @@ public class Annonce implements Serializable{
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+
+	public boolean isFumeur() {
+		return fumeur;
+	}
+
+
+
+	public void setFumeur(boolean fumeur) {
+		this.fumeur = fumeur;
+	}
+
+
+
+	public boolean isBagages() {
+		return bagages;
+	}
+
+
+
+	public void setBagages(boolean bagages) {
+		this.bagages = bagages;
+	}
+
+
+
+	public boolean isAnimaux() {
+		return animaux;
+	}
+
+
+
+	public void setAnimaux(boolean animaux) {
+		this.animaux = animaux;
+	}
+
+
+
+	public int getNbPlaces() {
+		return nbPlaces;
+	}
+
+
+
+	public void setNbPlaces(int nbPlaces) {
+		this.nbPlaces = nbPlaces;
+	}
+
+
+
+	public String getGender() {
+		return gender;
+	}
+
+
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+
 
 	public Annonce(Date dateTrajet, String lieuDepart, String lieuArrivee, double prix) {
 		super();
@@ -88,7 +164,7 @@ public class Annonce implements Serializable{
 	}
 
 	
-	//@JsonIgnore
+	@JsonIgnore
 	public Utilisateur getUtilisateur() {
 		return utilisateur;
 	}
